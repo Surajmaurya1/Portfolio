@@ -6,8 +6,11 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { StaggeredMenu } from "./StaggeredMenu";
 import { motion } from "framer-motion";
+import { DebugPanel } from "./DebugPanel";
 
 export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const menuItems = [
     { label: "Home", link: "/", ariaLabel: "Home" },
     { label: "About", link: "#about", ariaLabel: "About" },
@@ -31,10 +34,14 @@ export function Header() {
         menuButtonColor="#fff"
         openMenuButtonColor="#000"
         accentColor="#0070f3" 
-        colors={["#0070f3", "#e6e6e6ff"]} 
+        colors={["#cecece", "#f0f0f0"]} 
         logoUrl="" 
         changeMenuColorOnOpen={true}
+        onMenuOpen={() => setIsMenuOpen(true)}
+        onMenuClose={() => setIsMenuOpen(false)}
       />
+      
+      {!isMenuOpen && <DebugPanel />}
     </div>
   );
 }
