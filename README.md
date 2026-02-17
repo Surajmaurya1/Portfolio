@@ -1,9 +1,9 @@
 
-# Suraj Maurya - Senior Frontend Developer Portfolio
+# Suraj Maurya - Frontend Developer Portfolio
 
 A premium, performance-focused portfolio website built with Next.js 15, Tailwind CSS v4, and Framer Motion.
 
-## 🚀 Tech Stack
+# Tech Stack
 
 - **Next.js 15** (App Router)
 - **Tailwind CSS v4** (Styling & Theme)
@@ -12,7 +12,7 @@ A premium, performance-focused portfolio website built with Next.js 15, Tailwind
 - **Lucide React** (Icons)
 - **TypeScript** (Type Safety)
 
-## 🛠️ Setup & Installation
+# Setup & Installation
 
 1. **Install Dependencies**
    ```bash
@@ -29,7 +29,7 @@ A premium, performance-focused portfolio website built with Next.js 15, Tailwind
    npm run build
    ```
 
-## 📂 Project Structure
+# Project Structure
 
 - `app/` - App Router pages and layout
 - `components/` - Reusable UI components
@@ -38,7 +38,7 @@ A premium, performance-focused portfolio website built with Next.js 15, Tailwind
 - `styles/` - Global styles and Tailwind config (via CSS variables)
 - `public/` - Static assets
 
-## 🎨 Design Features
+# Design Features
 
 - **Dark Theme**: Deep charcoal background (`#0a0a0a`)
 - **Typography**: Inter (Body) + Outfit (Headings)
@@ -46,7 +46,7 @@ A premium, performance-focused portfolio website built with Next.js 15, Tailwind
 - **Smooth Scroll**: Native-like inertia scrolling
 - **Responsiveness**: Mobile-first grid layouts
 
-## 📝 Customization
+# Customization
 
 Update your resume data in `data/resume.ts`.
 Modify theme colors in `styles/globals.css`.
