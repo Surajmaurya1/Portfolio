@@ -43,7 +43,7 @@ export function About() {
               key={index}
               className="p-5 rounded-lg bg-surface border border-white/5 hover:border-white/10 transition-colors"
             >
-              <span className="text-accent text-sm font-medium">{item}</span>
+              <span className="text-neutral-300 text-sm font-medium">{item}</span>
             </div>
           ))}
         </motion.div>

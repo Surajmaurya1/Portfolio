@@ -54,8 +54,8 @@ export function Hero() {
         transition={{ delay: 1, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-neutral-500"
       >
-        <span className="text-xs uppercase tracking-widest">Scroll</span>
-        <ChevronDown className="w-4 h-4 animate-bounce" />
+        {/* <span className="text-xs uppercase tracking-widest">Scroll</span> */}
+        {/* <ChevronDown className="w-4 h-4 animate-bounce" /> */}
       </motion.div>
     </section>
   );

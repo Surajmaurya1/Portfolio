@@ -37,7 +37,7 @@ export function Experience() {
               <h3 className="text-xl md:text-2xl font-bold font-display text-white mb-1">
                 {job.company}
               </h3>
-              <p className="text-accent font-medium mb-4">{job.role}</p>
+              <p className="text-neutral-300 font-medium mb-4">{job.role}</p>
               <p className="text-neutral-400 mb-6 italic">{job.description}</p>
               <ul className="space-y-3">
                 {job.impact.map((point, i) => (
