@@ -20,9 +20,9 @@ export function Header() {
   ];
 
   const socialItems = [
-    { label: "GitHub", link: "https://github.com/surajm" },
-    { label: "LinkedIn", link: "https://linkedin.com/in/surajm" },
-    { label: "Email", link: "mailto:suraj@example.com" },
+    { label: "GitHub", link: "https://github.com/Surajmaurya1" },
+    { label: "LinkedIn", link: "https://www.linkedin.com/in/suraj-maurya-33a91325a" },
+    { label: "Email", link: "mailto:surajmaurya.pvt@gmail.com" },
   ];
 
   return (
