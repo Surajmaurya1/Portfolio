@@ -1,5 +1,5 @@
 
-# Suraj Maurya - Senior Frontend Developer Portfolio
+# Suraj Maurya - Frontend Developer Portfolio
 
 A premium, performance-focused portfolio website built with Next.js 15, Tailwind CSS v4, and Framer Motion.
 
