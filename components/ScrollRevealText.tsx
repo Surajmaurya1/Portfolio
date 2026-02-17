@@ -25,12 +25,12 @@ const CharacterV1 = ({
 
   const x = useTransform(
     scrollYProgress,
-    [0, 0.5],
+    [-0.15, 0.5],
     [distanceFromCenter * 50, 0],
   );
   const rotateX = useTransform(
     scrollYProgress,
-    [0, 0.5],
+    [-0.15, 0.5],
     [distanceFromCenter * 50, 0],
   );
 

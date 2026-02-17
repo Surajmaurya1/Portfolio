@@ -34,12 +34,12 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl"
+          className="flex flex-wrap justify-center gap-4 w-full max-w-5xl"
         >
           {RESUME_DATA.about.highlights.map((item, index) => (
             <div 
               key={index}
-              className="p-5 rounded-lg bg-surface border border-white/5 hover:border-white/10 transition-colors text-center"
+              className="p-5 rounded-lg bg-surface border border-white/5 hover:border-white/10 transition-colors text-center flex-1 min-w-[200px] max-w-[300px]"
             >
               <span className="text-neutral-300 text-sm font-medium">{item}</span>
             </div>
