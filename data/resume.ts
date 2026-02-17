@@ -56,8 +56,23 @@ export const RESUME_DATA = {
         "Optimized state handling",
         "Clean UI architecture",
       ],
-      link: "#",
+      link: "https://jenxkaro.com/",
     },
+    {
+  title: "Bookmark App",
+  tech: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
+  description:
+    "A simple and secure bookmark management app that allows users to save and manage website links using Google authentication.",
+  highlights: [
+    "Google authentication with Supabase Auth",
+    "Secure user-based bookmark storage",
+    "Type-safe frontend using TypeScript",
+    "Clean and minimal UI with Tailwind CSS",
+    "Real-time database integration with Supabase",
+  ],
+  link: "https://bookmark-mu-self.vercel.app/",
+},
+
     {
       title: "Neurowel Foundation",
       tech: ["React.js", "Tailwind CSS"],
