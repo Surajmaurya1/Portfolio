@@ -17,7 +17,7 @@ export function Hero() {
         className="max-w-4xl mx-auto space-y-8"
       >
         <h2 className="text-sm md:text-base font-medium text-accent tracking-widest uppercase mb-4">
-          Senior Frontend Engineer
+        Frontend Engineer
         </h2>
         
         <div className="relative h-24 md:h-40 w-full mb-4">
