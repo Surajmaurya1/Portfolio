@@ -8,16 +8,6 @@ import { StaggeredMenu } from "./StaggeredMenu";
 import { motion } from "framer-motion";
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const menuItems = [
     { label: "Home", link: "/", ariaLabel: "Home" },
     { label: "About", link: "#about", ariaLabel: "About" },
