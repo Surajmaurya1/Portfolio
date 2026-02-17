@@ -72,6 +72,19 @@ export const RESUME_DATA = {
   ],
   link: "https://bookmark-mu-self.vercel.app/",
 },
+{
+  title: "The Room",
+  tech: ["React.js", "Framer Motion", "CSS"],
+  description:
+    "An immersive, animation-driven web experience focused on smooth interactions and motion-based UI storytelling.",
+  highlights: [
+    "Motion-first UI using Framer Motion",
+    "Smooth page transitions and micro-interactions",
+    "Clean component structure",
+    "Responsive across devices",
+  ],
+  link: "https://the-room-gamma.vercel.app/",
+},
 
     {
       title: "Neurowel Foundation",
