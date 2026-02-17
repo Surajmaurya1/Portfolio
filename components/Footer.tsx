@@ -20,7 +20,7 @@ export function Footer() {
           </a>
         </div>
         <p className="text-neutral-500 text-sm">
-          &copy; {new Date().getFullYear()} {RESUME_DATA.name}. Built with Next.js, Tailwind & Framer Motion.
+          &copy; {new Date().getFullYear()} {RESUME_DATA.name}
         </p>
       </div>
     </footer>

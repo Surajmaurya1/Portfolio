@@ -9,17 +9,19 @@ export const Preloader = () => {
   const [show, setShow] = useState(true);
 
   useEffect(() => {
-    // Lock scroll when component mounts
-    document.body.style.overflow = "hidden";
+    if (show) {
+      document.body.style.overflow = "hidden";
+      document.body.style.cursor = "wait";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.cursor = "";
+    }
     
-    // Unlock scroll ONLY after exit animation is done (component unmounts) covers most cases,
-    // but if we want to unlock AS it swipes, we need to do it when setShow(false) happens.
-    // However, if we scroll while it's swiping, we might see background of body?
-    // Let's unlock on unmount.
     return () => {
       document.body.style.overflow = "";
+      document.body.style.cursor = "";
     };
-  }, []);
+  }, [show]);
 
   return (
     <AnimatePresence mode="wait">

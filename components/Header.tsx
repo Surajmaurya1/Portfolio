@@ -6,7 +6,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { StaggeredMenu } from "./StaggeredMenu";
 import { motion } from "framer-motion";
-import { DebugPanel } from "./DebugPanel";
+
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +41,7 @@ export function Header() {
         onMenuClose={() => setIsMenuOpen(false)}
       />
       
-      {!isMenuOpen && <DebugPanel />}
+
     </div>
   );
 }
