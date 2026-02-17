@@ -4,6 +4,7 @@
 import { motion, Variants } from "framer-motion";
 import { RESUME_DATA } from "@/data/resume";
 import { Section } from "./Section";
+import { ScrollRevealText } from "./ScrollRevealText";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -38,7 +39,7 @@ export function Skills() {
         transition={{ duration: 0.6 }}
         className="mb-12 text-left"
       >
-        <h2 className="text-3xl md:text-5xl font-bold font-display mb-4">Technical Proficiency</h2>
+        <ScrollRevealText text="Technical Proficiency" className="text-3xl md:text-5xl font-bold font-display mb-4 text-white" />
         <p className="text-neutral-400">Tools and technologies I work with.</p>
       </motion.div>
 

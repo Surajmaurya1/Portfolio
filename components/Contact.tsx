@@ -7,19 +7,16 @@ import { Button } from "./Button";
 import { RESUME_DATA } from "@/data/resume";
 import { Github, Linkedin, Mail } from "lucide-react";
 
+import { ScrollRevealText } from "./ScrollRevealText";
+
 export function Contact() {
   return (
     <Section id="contact" className="py-24 md:py-32 bg-gradient-to-b from-surface/20 to-transparent">
       <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto px-4">
-        <motion.h2 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight text-gradient mb-8"
-        >
-          Let's build something exceptional together.
-        </motion.h2>
+        <ScrollRevealText
+          text="Let's build something exceptional together."
+          className="text-4xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight text-white mb-8"
+        />
         
         <motion.p 
           initial={{ opacity: 0, y: 30 }}

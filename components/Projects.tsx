@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { RESUME_DATA } from "@/data/resume";
 import { ProjectCard } from "./ProjectCard";
 import { Section } from "./Section";
-import BlurText from "./BlurText";
+import { ScrollRevealText } from "./ScrollRevealText";
 
 export function Projects() {
   return (
@@ -16,12 +16,9 @@ export function Projects() {
         viewport={{ once: true }}
         className="mb-12 md:mb-20"
       >
-        <BlurText
+        <ScrollRevealText
           text="Featured Projects"
-          delay={150}
-          animateBy="words"
-          direction="top"
-          className="text-3xl md:text-5xl font-bold font-display mb-6"
+          className="text-3xl md:text-5xl font-bold font-display mb-6 text-white"
         />
         <p className="text-neutral-400 text-lg max-w-2xl">
           A selection of projects that demonstrate scalable architecture and performance-focused development.

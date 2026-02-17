@@ -3,18 +3,15 @@
 
 import { RESUME_DATA } from "@/data/resume";
 import { Section } from "./Section";
-import BlurText from "./BlurText";
+import { ScrollRevealText } from "./ScrollRevealText";
 import { motion } from "framer-motion";
 
 export function Experience() {
   return (
     <Section id="experience">
-      <BlurText
+      <ScrollRevealText
         text="Experience"
-        delay={150}
-        animateBy="words"
-        direction="top"
-        className="text-3xl md:text-4xl font-bold font-display mb-12"
+        className="text-3xl md:text-4xl font-bold font-display mb-12 text-white"
       />
       <div className="space-y-16">
         {RESUME_DATA.experience.map((job, index) => (
