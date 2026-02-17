@@ -592,6 +592,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   .sm-scope .staggered-menu-wrapper[data-open] .sm-toggle { color: #000000 !important; }
   .sm-scope .sm-panel-item { font-size: 3rem !important; }
   .sm-scope .sm-panel-list[data-numbering] .sm-panel-item::after { font-size: 14px; top: 0.2em; color: var(--sm-accent, #ff0000) !important; }
+  .sm-scope .sm-panel-list { margin-top: 15vh; }
 }
       `}</style>
     </div>
