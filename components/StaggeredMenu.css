@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   pointer-events: none; /* Let clicks pass through the full screen wrapper */
-  z-index: 100;
+  z-index: 9999;
 }
 
 .staggered-menu-wrapper.fixed-wrapper {
@@ -24,7 +24,15 @@
   justify-content: space-between;
   align-items: center;
   pointer-events: auto; /* Enable clicks on header elements */
-  z-index: 200;
+  z-index: 10000;
+  transition: all 0.3s ease-in-out;
+}
+
+.staggered-menu-header.scrolled {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .sm-logo {
@@ -137,7 +145,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 160;
+  z-index: 9998;
   overflow: hidden;
 }
 

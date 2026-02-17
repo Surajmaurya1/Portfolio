@@ -1,7 +1,7 @@
 
 "use client";
 
-import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
+import React, { useCallback, useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import './StaggeredMenu.css';
 
@@ -407,7 +407,7 @@ const StaggeredMenu = ({
           return arr.map((c, i) => <div key={i} className="sm-prelayer" style={{ background: c }} />);
         })()}
       </div>
-      <header className="staggered-menu-header" aria-label="Main navigation header">
+      <header className={`staggered-menu-header ${isScrolled ? 'scrolled' : ''}`} aria-label="Main navigation header">
         <div className="sm-logo" aria-label="Logo">
           {logoUrl && (
              <img
