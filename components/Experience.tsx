@@ -3,19 +3,19 @@
 
 import { RESUME_DATA } from "@/data/resume";
 import { Section } from "./Section";
+import BlurText from "./BlurText";
 import { motion } from "framer-motion";
 
 export function Experience() {
   return (
     <Section id="experience">
-      <motion.h2 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+      <BlurText
+        text="Experience"
+        delay={150}
+        animateBy="words"
+        direction="top"
         className="text-3xl md:text-4xl font-bold font-display mb-12"
-      >
-        Experience
-      </motion.h2>
+      />
       <div className="space-y-16">
         {RESUME_DATA.experience.map((job, index) => (
           <motion.div 

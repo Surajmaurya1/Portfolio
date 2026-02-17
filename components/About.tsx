@@ -4,6 +4,7 @@
 import { motion } from "framer-motion";
 import { RESUME_DATA } from "@/data/resume";
 import { Section } from "./Section";
+import BlurText from "./BlurText";
 
 export function About() {
   return (
@@ -15,9 +16,13 @@ export function About() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold font-display mb-8">
-            {RESUME_DATA.about.title}
-          </h2>
+          <BlurText
+            text={RESUME_DATA.about.title}
+            delay={150}
+            animateBy="words"
+            direction="top"
+            className="text-3xl md:text-5xl font-bold font-display mb-8"
+          />
           <p className="text-lg text-neutral-400 leading-relaxed mb-6">
             {RESUME_DATA.about.description}
           </p>
