@@ -431,7 +431,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             )}
             {!logoUrl && (
               <span className="text-xl font-bold tracking-tight text-white font-display hover:opacity-80 transition-opacity">
-                Suraj M.
+                
               </span>
             )}
           </div>
