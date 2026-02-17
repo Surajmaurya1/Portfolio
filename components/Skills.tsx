@@ -60,7 +60,7 @@ export function Skills() {
             </h3>
             <ul className="space-y-3">
               {items.map((skill) => (
-                <li key={skill} className="grid grid-cols-[20px_1fr] items-center text-sm md:text-base text-neutral-300 text-left">
+                <li key={skill} className="grid grid-cols-[20px_1fr] items-start text-sm md:text-base text-neutral-300 text-left">
                   <span className="w-1.5 h-1.5 bg-neutral-600 rounded-full flex-shrink-0 mt-2" />
                   {skill}
                 </li>

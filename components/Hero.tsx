@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 pt-16">
+    <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-4">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
