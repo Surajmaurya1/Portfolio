@@ -4,6 +4,7 @@
 import { motion } from "framer-motion";
 import { Button } from "./Button";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import TextPressure from "./TextPressure";
 import Link from "next/link";
 
 export function Hero() {
@@ -19,9 +20,19 @@ export function Hero() {
           Senior Frontend Engineer
         </h2>
         
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-display tracking-tight leading-[1.1] text-gradient">
-          Suraj Maurya
-        </h1>
+        <div className="relative h-24 md:h-40 w-full mb-4">
+          <TextPressure
+            text="Suraj Maurya"
+            flex={true}
+            alpha={false}
+            stroke={false}
+            width={true}
+            weight={true}
+            italic={true}
+            textColor="#ffffff"
+            minFontSize={36}
+          />
+        </div>
         
         <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed">
           Building scalable, high-performance web applications with clean architecture and production-grade frontend systems.
