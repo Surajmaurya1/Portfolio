@@ -46,11 +46,5 @@ A premium, performance-focused portfolio website built with Next.js 15, Tailwind
 - **Smooth Scroll**: Native-like inertia scrolling
 - **Responsiveness**: Mobile-first grid layouts
 
-# Customization
-
-Update your resume data in `data/resume.ts`.
-Modify theme colors in `styles/globals.css`.
-
----
 
 © 2026 Suraj Maurya
