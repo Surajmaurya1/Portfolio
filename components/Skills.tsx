@@ -36,7 +36,7 @@ export function Skills() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }} // Trigger earlier but with margin
         transition={{ duration: 0.6 }}
-        className="mb-12 text-center"
+        className="mb-12 text-left"
       >
         <h2 className="text-3xl md:text-5xl font-bold font-display mb-4">Technical Proficiency</h2>
         <p className="text-neutral-400">Tools and technologies I work with.</p>
@@ -55,13 +55,13 @@ export function Skills() {
             variants={itemVariants}
             className="p-6 rounded-xl bg-surface border border-white/5 hover:border-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-white/5"
           >
-            <h3 className="text-lg font-bold capitalize mb-6 text-accent border-b border-white/5 pb-2">
+            <h3 className="text-lg font-bold capitalize mb-6 text-accent border-b border-white/5 pb-2 text-left">
               {category}
             </h3>
             <ul className="space-y-3">
               {items.map((skill) => (
-                <li key={skill} className="flex items-center text-sm md:text-base text-neutral-300">
-                  <span className="w-1.5 h-1.5 bg-neutral-600 rounded-full mr-3" />
+                <li key={skill} className="grid grid-cols-[20px_1fr] items-center text-sm md:text-base text-neutral-300 text-left">
+                  <span className="w-1.5 h-1.5 bg-neutral-600 rounded-full flex-shrink-0 mt-2" />
                   {skill}
                 </li>
               ))}

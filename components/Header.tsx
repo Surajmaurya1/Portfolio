@@ -38,7 +38,7 @@ export function Header() {
         items={menuItems}
         socialItems={socialItems}
         isFixed={true}
-        menuButtonColor={isScrolled ? "#000" : "#fff"} 
+        menuButtonColor="#fff"
         openMenuButtonColor="#000"
         accentColor="#0070f3" 
         colors={["#cecece", "#f0f0f0"]} 
