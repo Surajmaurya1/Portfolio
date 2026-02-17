@@ -6,7 +6,7 @@ export const RESUME_DATA = {
   about: {
     title: "About",
     description:
-      "I am a frontend engineer experienced in building scalable UI systems using React.js and Next.js. I have a strong focus on performance optimization, reusable architecture, clean code, and real-world product delivery. I am comfortable collaborating cross-functionally and mentoring junior developers.",
+      "I am a frontend developer focused on building scalable, production-ready web applications using React.js and Next.js. My work emphasizes clean component architecture, performance optimization, and maintainable codebases. I have experience integrating APIs, collaborating closely with design and backend teams, and translating product requirements into reliable, user-centric interfaces. I also contribute to team growth through code reviews and mentoring junior developers.",
     highlights: [
       "Component architecture",
       "API integration patterns",
