@@ -27,7 +27,7 @@ export const RESUME_DATA = {
         "Integrated REST APIs with resilient error/loading handling patterns",
         "Improved performance using lazy loading and code splitting",
         "Deployed and maintained production builds on Vercel",
-        "Mentored 2–3 interns and reviewed code",
+        "Mentored 4-5 interns and reviewed code",
         "Collaborated with design & backend teams on production releases",
       ],
     },
