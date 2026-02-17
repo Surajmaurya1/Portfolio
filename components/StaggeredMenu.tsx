@@ -590,7 +590,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   .sm-scope .staggered-menu-panel { width: 100%; left: 0; right: 0; }
   .sm-scope .staggered-menu-wrapper[data-open] .sm-logo-img { filter: invert(0%); }
   .sm-scope .staggered-menu-wrapper[data-open] .sm-toggle { color: #000000 !important; }
-  
+  .sm-scope .sm-panel-item { font-size: 3rem !important; }
+  .sm-scope .sm-panel-list[data-numbering] .sm-panel-item::after { font-size: 14px; top: 0.2em; color: var(--sm-accent, #ff0000) !important; }
 }
       `}</style>
     </div>
