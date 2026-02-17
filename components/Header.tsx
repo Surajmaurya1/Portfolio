@@ -31,7 +31,7 @@ export function Header() {
         menuButtonColor="#fff"
         openMenuButtonColor="#000"
         accentColor="#0070f3" 
-        colors={["#cecece", "#f0f0f0"]} 
+        colors={["#0070f3", "#e6e6e6ff"]} 
         logoUrl="" 
         changeMenuColorOnOpen={true}
       />

@@ -588,6 +588,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   .sm-scope .staggered-menu-panel { width: 100%; left: 0; right: 0; }
   .sm-scope .staggered-menu-wrapper[data-open] .sm-logo-img { filter: invert(0%); }
   .sm-scope .staggered-menu-wrapper[data-open] .sm-toggle { color: #000000 !important; }
+  
 }
       `}</style>
     </div>

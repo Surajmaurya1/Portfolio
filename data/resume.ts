@@ -88,8 +88,8 @@ export const RESUME_DATA = {
     dev: ["Git", "GitHub", "Bitbucket", "Vercel", "CI/CD basics"],
   },
   contacts: {
-    email: "mailto:hello@surajmaurya.dev",
-    linkedin: "https://linkedin.com/in/suraj-maurya",
-    github: "https://github.com/suraj-maurya",
+    email: "mailto:surajmaurya.pvt@gmail.com",
+    linkedin: "https://www.linkedin.com/in/suraj-maurya-33a91325a",
+    github: "https://github.com/Surajmaurya1",
   },
 } as const;
