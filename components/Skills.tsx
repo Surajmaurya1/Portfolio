@@ -37,7 +37,7 @@ export function Skills() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }} // Trigger earlier but with margin
         transition={{ duration: 0.6 }}
-        className="mb-12 text-left"
+        className="mb-12 text-center"
       >
         <ScrollRevealText text="Technical Proficiency" className="text-3xl md:text-5xl font-bold font-display mb-4 text-white" />
         <p className="text-neutral-400">Tools and technologies I work with.</p>

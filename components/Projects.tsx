@@ -14,13 +14,13 @@ export function Projects() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mb-12 md:mb-20"
+        className="mb-12 md:mb-20 text-center"
       >
         <ScrollRevealText
           text="Featured Projects"
           className="text-3xl md:text-5xl font-bold font-display mb-6 text-white"
         />
-        <p className="text-neutral-400 text-lg max-w-2xl">
+        <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
           A selection of projects that demonstrate scalable architecture and performance-focused development.
         </p>
       </motion.div>
