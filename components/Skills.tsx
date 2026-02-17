@@ -1,9 +1,32 @@
 
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { RESUME_DATA } from "@/data/resume";
 import { Section } from "./Section";
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.25, 0.1, 0.25, 1.0],
+    }
+  },
+};
 
 export function Skills() {
   return (
@@ -11,22 +34,26 @@ export function Skills() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }} // Trigger earlier but with margin
+        transition={{ duration: 0.6 }}
         className="mb-12 text-center"
       >
         <h2 className="text-3xl md:text-5xl font-bold font-display mb-4">Technical Proficiency</h2>
         <p className="text-neutral-400">Tools and technologies I work with.</p>
       </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {Object.entries(RESUME_DATA.skills).map(([category, items], index) => (
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }} // Triggers when 50px of element is in view
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+      >
+        {Object.entries(RESUME_DATA.skills).map(([category, items]) => (
           <motion.div
             key={category}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="p-6 rounded-xl bg-surface border border-white/5 hover:border-white/10 transition-all duration-300"
+            variants={itemVariants}
+            className="p-6 rounded-xl bg-surface border border-white/5 hover:border-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-white/5"
           >
             <h3 className="text-lg font-bold capitalize mb-6 text-accent border-b border-white/5 pb-2">
               {category}
@@ -41,7 +68,7 @@ export function Skills() {
             </ul>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </Section>
   );
 }
