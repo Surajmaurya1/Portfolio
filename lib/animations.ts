@@ -1,27 +1,26 @@
-
 import { Variants, Transition } from "framer-motion";
 
 // Easing
-export const PALMER_EASE: [number, number, number, number] = [0.65, 0, 0.35, 1]; // cubic-bezier(0.65, 0, 0.35, 1)
+export const MASON_EASE: [number, number, number, number] = [0.65, 0, 0.35, 1];
 
 // Transitions
 export const smoothTransition: Transition = {
-  duration: 0.7,
-  ease: PALMER_EASE,
+  duration: 0.6,
+  ease: MASON_EASE,
 };
 
 export const hoverTransition: Transition = {
-  duration: 0.2, // Fast hover in
+  duration: 0.3,
   ease: "easeOut",
 };
 
-export const staggerDelay = 0.05;
+export const staggerDelay = 0.04;
 
 // Variants
 
 // 1. Scroll-based reveal: fade in + move upward
 export const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 32 }, // 32px is roughly 2rem
+  hidden: { opacity: 0, y: 28 },
   visible: { 
     opacity: 1, 
     y: 0,
@@ -40,20 +39,20 @@ export const staggerContainer: Variants = {
 };
 
 export const staggerItem: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 28 },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: {
-      duration: 0.5,
-      ease: "easeOut",
+      duration: 0.6,
+      ease: MASON_EASE,
     }
   },
 };
 
 // 3. Image & project card animations: Scale in + Fade in
 export const scaleIn: Variants = {
-  hidden: { opacity: 0, scale: 0.95 },
+  hidden: { opacity: 0, scale: 0.96 },
   visible: { 
     opacity: 1, 
     scale: 1,
@@ -70,19 +69,17 @@ export const hoverScaleWrapper: Variants = {
   },
 };
 
-// 5. Page transitions (if needed, though Next.js handles route transitions)
-export const pageTransition: Variants = {
-  hidden: { opacity: 0, y: 10 },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    transition: smoothTransition
-  },
-  exit: { 
-    opacity: 0, 
-    y: -10,
-    transition: smoothTransition 
-  },
+// Video/Grain overlays
+export const grainOverlay: Variants = {
+  animate: {
+    x: ["0%", "-5%", "-15%", "7%", "-5%", "-25%", "15%", "0%"],
+    y: ["0%", "-10%", "5%", "-25%", "8%", "15%", "-5%", "0%"],
+    transition: {
+      duration: 8,
+      ease: "linear",
+      repeat: Infinity,
+    }
+  }
 };
 
 // Viewport config

@@ -29,9 +29,12 @@ export function Experience() {
               transition={smoothTransition}
               viewport={{ once: true, margin: "-10%" }}
             >
-              <h2 className="text-5xl md:text-7xl lg:text-7xl font-bold font-display tracking-tighter leading-[0.9] text-white uppercase break-words">
+              <h2 
+                className="font-bold font-display tracking-[-0.03em] leading-[0.9] text-white uppercase break-words"
+                 style={{ fontSize: "clamp(2rem, 3.5vw, 4rem)" }}
+              >
                 <ScrollRevealText
-                  text="Working History"
+                  text="[ Working History ]"
                   className="block text-left"
                   tagName="span"
                 />
@@ -54,27 +57,29 @@ export function Experience() {
                   transition={smoothTransition}
                   className="group py-8 md:py-12 border-t border-white/10 first:border-none lg:first:border-t"
                 >
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="md:col-span-1">
-                      <span className="text-neutral-500 font-mono text-sm tracking-widest uppercase block mb-2">
-                        {job.period}
-                      </span>
-                      <h3 className="text-2xl font-bold text-white group-hover:text-accent transition-colors duration-300">
-                        {job.company}
-                      </h3>
-                    </div>
-                    <div className="md:col-span-2">
-                       <h4 className="text-xl text-neutral-200 mb-4 font-medium">{job.role}</h4>
-                       <p className="text-neutral-400 leading-relaxed mb-6 font-light">{job.description}</p>
-                       <ul className="space-y-2">
+                  <div className="flex flex-col gap-8">
+                     <div className="flex flex-col gap-2 border-b border-white/5 pb-8 mb-2">
+                        <span className="text-accent text-neutral-400 font-mono text-sm tracking-widest uppercase mb-2">
+                            {job.period}
+                        </span>
+                        <h3 style={{ fontSize: "clamp(2rem, 3.5vw, 4rem)" }} className="text-3xl md:text-5xl font-bold font-display text-white uppercase group-hover:text-neutral-300 transition-colors leading-[0.9]">
+                            {job.company}
+                        </h3>
+                        <span className="text-xl md:text-2xl font-[family-name:var(--font-playfair)] italic text-neutral-400 mt-1">
+                            {job.role}
+                        </span>
+                     </div>
+                     
+                     <div className="pl-0">
+                       <ul className="grid grid-cols-1 gap-y-4 max-w-3xl">
                           {job.impact.map((point, i) => (
-                            <li key={i} className="flex items-start text-sm text-neutral-500">
-                              <span className="mr-3 mt-1.5 w-1 h-1 bg-neutral-700 rounded-full flex-shrink-0" />
+                            <li key={i} className="flex items-start text-base text-neutral-400 leading-relaxed font-light">
+                              <span className="mr-4 mt-2.5 w-1 h-1 bg-white/40 rounded-full flex-shrink-0" />
                               {point}
                             </li>
                           ))}
                        </ul>
-                    </div>
+                     </div>
                   </div>
                 </motion.div>
               ))}

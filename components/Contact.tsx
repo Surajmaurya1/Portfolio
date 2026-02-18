@@ -31,9 +31,12 @@ export function Contact() {
                         transition={smoothTransition}
                         viewport={{ once: true, margin: "-10%" }}
                     >
-                        <h2 className="text-5xl md:text-7xl lg:text-7xl font-bold font-display tracking-tighter leading-[0.9] text-white uppercase break-words">
+                        <h2 
+                            className="font-bold font-display tracking-[-0.03em] leading-[0.9] text-white uppercase break-words"
+                            style={{ fontSize: "clamp(2rem, 3.5vw, 4rem)" }}
+                        >
                             <ScrollRevealText
-                            text="Let's Connect"
+                            text="[ Let's Connect ]"
                             className="block text-left"
                             tagName="span"
                             />
@@ -78,13 +81,13 @@ export function Contact() {
                                     target={item.href.startsWith("mailto") ? "_self" : "_blank"}
                                     className="group flex items-center justify-between py-8 md:py-10 border-t border-white/10 last:border-b hover:px-4 transition-all duration-300"
                                 >
-                                    <div className="flex items-center gap-4">
-                                        <item.icon className="w-6 h-6 text-neutral-400 group-hover:text-white transition-colors" />
-                                        <span className="text-2xl md:text-3xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-neutral-400 transition-all">
+                                    <div className="flex items-center gap-6">
+                                        <item.icon className="w-8 h-8 md:w-10 md:h-10 text-neutral-500 group-hover:text-white transition-colors" />
+                                        <span  style={{ fontSize: "clamp(2rem, 3.5vw, 4rem)" }} className="text-3xl md:text-5xl lg:text-6xl font-bold font-display leading-none text-white group-hover:text-neutral-400 transition-colors tracking-tighter">
                                             {item.label}
                                         </span>
                                     </div>
-                                    <ArrowUpRight className="w-6 h-6 text-neutral-500 group-hover:text-white group-hover:rotate-45 transition-all duration-300" />
+                                    <ArrowUpRight className="w-8 h-8 md:w-12 md:h-12 text-neutral-600 group-hover:text-white group-hover:rotate-45 transition-all duration-300" />
                                 </Link>
                             </motion.div>
                         ))}

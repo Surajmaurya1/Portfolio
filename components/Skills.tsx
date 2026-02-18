@@ -29,9 +29,12 @@ export function Skills() {
               transition={smoothTransition}
               viewport={{ once: true, margin: "-10%" }}
             >
-              <h2 className="text-5xl md:text-7xl lg:text-7xl font-bold font-display tracking-tighter leading-[0.9] text-white uppercase break-words">
+              <h2 
+                className="font-bold font-display tracking-[-0.03em] leading-[0.9] text-white uppercase break-words"
+                style={{ fontSize: "clamp(2rem, 3.5vw, 4rem)" }}
+              >
                 <ScrollRevealText
-                  text="Technical Proficiency"
+                  text="[ Technical Proficiency ]"
                   className="block text-left"
                   tagName="span"
                 />
@@ -54,21 +57,21 @@ export function Skills() {
                   transition={smoothTransition}
                   className="py-10 border-t border-white/10 last:border-b"
                 >
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-                    <h3 className="text-2xl font-bold text-white capitalize group-hover:text-accent transition-colors">
-                      {category}
-                    </h3>
-                    <div className="flex flex-wrap gap-x-4 gap-y-2">
-                        {items.map((skill, i) => (
-                           <span 
-                            key={skill}
-                            className="text-lg md:text-xl text-neutral-400 font-light"
-                           >
-                            {skill}{i !== items.length - 1 && <span className="text-neutral-700 ml-4">/</span>}
-                           </span>
-                        ))}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                        <h3 className="text-3xl lg:text-4xl font-display font-bold tracking-tight text-white capitalize mb-4 md:mb-0">
+                            {category}
+                        </h3>
+                        <div className="flex flex-wrap gap-x-3 gap-y-2 leading-none">
+                            {items.map((skill, i) => (
+                               <span 
+                                key={skill}
+                                className="text-xl md:text-2xl lg:text-3xl text-neutral-400 font-medium hover:text-white transition-colors"
+                               >
+                                {skill}{i !== items.length - 1 && <span className="text-neutral-600 ml-3 font-light">/</span>}
+                               </span>
+                            ))}
+                        </div>
                     </div>
-                  </div>
                 </motion.div>
               ))}
             </motion.div>

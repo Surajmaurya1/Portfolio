@@ -9,7 +9,6 @@ interface ScrollRevealTextProps {
   text: string;
   className?: string;
   wordClassName?: string;
-  charClassName?: string;
   tagName?: keyof React.JSX.IntrinsicElements;
 }
 
@@ -17,7 +16,6 @@ export const ScrollRevealText = ({
   text, 
   className,
   wordClassName,
-  charClassName,
   tagName = "h2"
 }: ScrollRevealTextProps) => {
   const words = text.split(" ");
@@ -32,18 +30,16 @@ export const ScrollRevealText = ({
       viewport={viewportConfig}
     >
       <span className="screen-reader-text sr-only">{text}</span>
-      <span aria-hidden="true">
+      <span aria-hidden="true" className="block">
         {words.map((word, i) => (
-          <span key={i} className={cn("inline-block whitespace-nowrap overflow-hidden align-top", wordClassName)}>
-            {word.split("").map((char, j) => (
-              <motion.span
-                key={j}
-                className={cn("inline-block", charClassName)}
-                variants={staggerItem}
-              >
-                {char}
-              </motion.span>
-            ))}
+          <span key={i} className="inline-block whitespace-nowrap">
+            <motion.span
+              className={cn("inline-block", wordClassName)}
+              variants={staggerItem}
+            >
+              {word}
+            </motion.span>
+            {/* Add space after word if not last */}
             {i !== words.length - 1 && (
               <span className="inline-block">&nbsp;</span>
             )}

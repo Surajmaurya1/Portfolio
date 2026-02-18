@@ -29,9 +29,12 @@ export function About() {
               transition={smoothTransition}
               viewport={{ once: true, margin: "-10%" }}
             >
-              <h2 className="text-5xl md:text-7xl lg:text-7xl font-bold font-display tracking-tighter leading-[0.9] text-white">
+              <h2 
+                className="font-bold font-display tracking-[-0.03em] leading-[0.9] text-white"
+                style={{ fontSize: "clamp(2rem, 3.5vw, 4rem)" }}
+              >
                 <ScrollRevealText
-                  text="Who I Am"
+                  text="[ Who I Am ]"
                   className="block text-left"
                   tagName="span"
                 />

@@ -31,9 +31,12 @@ export function Projects() {
               transition={smoothTransition}
               viewport={{ once: true, margin: "-10%" }}
             >
-              <h2 className="text-5xl md:text-7xl lg:text-7xl font-bold font-display tracking-tighter leading-[0.9] text-white uppercase break-words">
+              <h2 
+                className="font-bold font-display tracking-[-0.03em] leading-[0.9] text-white uppercase break-words"
+                style={{ fontSize: "clamp(2rem, 3.5vw, 4rem)" }}
+              >
                 <ScrollRevealText
-                  text="Selected Work"
+                  text="[ Selected Work ]"
                   className="block text-left"
                   tagName="span"
                 />
@@ -58,9 +61,11 @@ export function Projects() {
                 >
                   <div className="flex flex-col gap-6">
                     <div className="flex justify-between items-start">
-                        <h3 className="text-3xl md:text-4xl font-bold text-white group-hover:text-accent transition-colors duration-300">
-                            {project.title}
-                        </h3>
+                                    <h3 style={{ fontSize: "clamp(2rem, 3.5vw, 4rem)" }}
+                                        className="text-3xl md:text-5xl lg:text-6xl font-bold font-display text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-neutral-400 transition-all tracking-tighter leading-none"
+                                    >
+                                        {project.title}
+                                    </h3>
                         <Link 
                             href={project.link} 
                             target="_blank"

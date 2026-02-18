@@ -20,32 +20,31 @@ export function Philosophy() {
               variants={fadeUp}
               transition={smoothTransition}
             >
-              <h2 className="text-3xl md:text-5xl lg:text-7xl font-bold font-display tracking-tighter leading-[0.9] text-white overflow-visible">
+              <h2 
+                className="font-bold font-display tracking-[-0.02em] leading-[0.9] text-white overflow-visible"
+                style={{ fontSize: "clamp(2rem, 3.5vw, 4rem)" }}
+              >
                 <ScrollRevealText
                   text="Building Scalable"
                   className="block text-left mb-2" 
-                  wordClassName="mr-4"
                   tagName="span"
                 />
                 <span className="block text-neutral-500">
                    <ScrollRevealText
                     text="Systems &"
                     className="block text-left mb-2"
-                    wordClassName="mr-4"
                     tagName="span"
                   />
                 </span>
                  <ScrollRevealText
                   text="Production Ready"
                   className="block text-left mb-2"
-                   wordClassName="mr-4"
                    tagName="span"
                 />
                  <span className="flex items-center gap-4">
                   <ScrollRevealText
                     text="Interfaces."
                     className="block text-left"
-                     wordClassName="mr-0"
                      tagName="span"
                   />
                    {/* The Japanese text from reference or a symbol */}
@@ -69,12 +68,26 @@ export function Philosophy() {
               variants={fadeUp}
               transition={{ ...smoothTransition, delay: 0.2 }}
             >
-               <p className="text-2xl md:text-3xl lg:text-4xl text-white leading-tight font-medium mb-8">
-                 {RESUME_DATA.tagline}
+               <p className="text-xl md:text-2xl text-white font-medium mb-8 leading-relaxed">
+                 I am a Software Developer & Engineer based in India. I build scalable systems, resilient APIs, and high-performance web applications with clean architecture.
                </p>
-               <p className="text-lg md:text-xl text-neutral-400 leading-relaxed max-w-xl">
-                 {RESUME_DATA.about.description}
-               </p>
+               
+               <div className="space-y-6">
+                 {Object.entries(RESUME_DATA.skills).map(([category, skills]) => (
+                    <div key={category}>
+                        <span className="block text-sm font-mono text-neutral-500 uppercase tracking-widest mb-3">
+                            [ {category.toUpperCase()} ]
+                        </span>
+                        <div className="flex flex-wrap gap-2">
+                            {skills.map(s => (
+                                <span key={s} className="text-xs font-mono text-neutral-400 uppercase tracking-widest hover:text-white transition-colors cursor-default whitespace-nowrap">
+                                    [ {s} ]
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                 ))}
+               </div>
             </motion.div>
           </div>
         </div>
@@ -88,8 +101,8 @@ export function Philosophy() {
             className="w-full h-px bg-white/20 mt-12 mb-6 lg:mt-20 lg:mb-8" 
         />
         
-        <div className="flex flex-wrap gap-4 md:gap-8 text-xs md:text-sm font-medium text-neutral-400 uppercase tracking-widest">
-            {["Architecture", "Performance", "Scalability"].map((label, i) => (
+        <div className="flex flex-wrap gap-4 md:gap-8 text-xs md:text-sm font-medium text-neutral-400 uppercase tracking-widest font-mono">
+            {["[ Architecture ]", "[ Performance ]", "[ Scalability ]"].map((label, i) => (
                 <motion.span
                     key={label}
                     initial={{ opacity: 0, y: 10 }}

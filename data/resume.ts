@@ -1,104 +1,109 @@
-
 export const RESUME_DATA = {
   name: "Suraj Maurya",
   title: "Frontend Developer | React & Next.js Specialist",
-  tagline: "Building scalable, high-performance web applications with clean architecture and production-grade frontend systems.",
+  tagline:
+    "Designing and engineering scalable, high-performance web interfaces with clean architecture and production-ready systems.",
+
   about: {
     title: "About",
     description:
-      "I am a frontend developer focused on building scalable, production-ready web applications using React.js and Next.js. My work emphasizes clean component architecture, performance optimization, and maintainable codebases. I have experience integrating APIs, collaborating closely with design and backend teams, and translating product requirements into reliable, user-centric interfaces. I also contribute to team growth through code reviews and mentoring junior developers.",
+      "I am a frontend developer specializing in building scalable, production-grade web applications using React.js and Next.js. My work focuses on clean component architecture, performance optimization, and maintainable UI systems. I collaborate closely with designers and backend engineers to translate complex product requirements into reliable, user-centric interfaces. Alongside delivery, I actively contribute to code quality through reviews, documentation, and mentoring junior developers.",
     highlights: [
-      "Component architecture",
-      "API integration patterns",
-      "Performance tuning",
-      "Cross-browser reliability",
+      "Scalable component architecture",
+      "API-driven frontend systems",
+      "Performance optimization",
+      "Design-to-code collaboration",
       "Production deployments",
-      "Mentoring interns",
+      "Code reviews & mentoring",
     ],
   },
+
   experience: [
     {
       company: "Streamcore Web Technologies",
       role: "Software Developer (Frontend)",
       period: "June 2025 – Present",
-      description: "Architecting scalable UI modules and mentoring junior developers.",
+      description:
+        "Building and maintaining scalable frontend systems while supporting team growth.",
       impact: [
-        "Architected scalable UI modules using reusable component systems",
-        "Integrated REST APIs with resilient error/loading handling patterns",
-        "Improved performance using lazy loading and code splitting",
-        "Deployed and maintained production builds on Vercel",
-        "Mentored 4-5 interns and reviewed code",
-        "Collaborated with design & backend teams on production releases",
+        "Architected reusable UI modules using scalable component systems",
+        "Integrated REST APIs with robust loading and error-handling patterns",
+        "Improved performance through lazy loading and code splitting",
+        "Deployed and maintained production applications on Vercel",
+        "Mentored 4–5 interns through code reviews and guidance",
+        "Collaborated with design and backend teams on production releases",
       ],
     },
     {
       company: "Streamcore Web Technologies",
       role: "Frontend Developer Intern",
       period: "March 2025 – May 2025",
-      description: "Delivering responsive UI features and fixing inconsistencies.",
+      description:
+        "Delivered responsive UI features while learning production workflows.",
       impact: [
-        "Delivered responsive UI features",
-        "Fixed UI inconsistencies",
-        "Learned scalable component structure",
-        "Followed real-world Git workflows",
+        "Implemented responsive UI components",
+        "Resolved layout and styling inconsistencies",
+        "Adopted scalable component structuring practices",
+        "Worked with real-world Git and collaboration workflows",
       ],
     },
   ],
+
   projects: [
     {
       title: "Jenxkaro",
-      tech: ["Next.js", "Tailwind", "REST APIs"],
+      tech: ["Next.js", "Tailwind CSS", "REST APIs"],
       description:
-        "A scalable e-commerce frontend with structured product architecture, cart system, and checkout flow.",
+        "A scalable e-commerce frontend featuring structured product architecture, cart functionality, and a complete checkout flow.",
       highlights: [
-        "Modular component design",
-        "Dynamic API-driven data",
-        "Optimized state handling",
-        "Clean UI architecture",
+        "Modular and reusable component design",
+        "API-driven product and cart data",
+        "Optimized state and data handling",
+        "Clean and maintainable UI architecture",
       ],
       link: "https://jenxkaro.com/",
     },
     {
-  title: "Bookmark App",
-  tech: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
-  description:
-    "A simple and secure bookmark management app that allows users to save and manage website links using Google authentication.",
-  highlights: [
-    "Google authentication with Supabase Auth",
-    "Secure user-based bookmark storage",
-    "Type-safe frontend using TypeScript",
-    "Clean and minimal UI with Tailwind CSS",
-    "Real-time database integration with Supabase",
-  ],
-  link: "https://bookmark-mu-self.vercel.app/",
-},
-{
-  title: "The Room",
-  tech: ["React.js", "Framer Motion", "CSS"],
-  description:
-    "An immersive, animation-driven web experience focused on smooth interactions and motion-based UI storytelling.",
-  highlights: [
-    "Motion-first UI using Framer Motion",
-    "Smooth page transitions and micro-interactions",
-    "Clean component structure",
-    "Responsive across devices",
-  ],
-  link: "https://the-room-gamma.vercel.app/",
-},
-
+      title: "Bookmark App",
+      tech: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
+      description:
+        "A secure bookmark management application allowing users to save and manage links with Google authentication.",
+      highlights: [
+        "Google authentication using Supabase Auth",
+        "User-specific secure bookmark storage",
+        "Type-safe frontend with TypeScript",
+        "Minimal and accessible UI design",
+        "Real-time database integration",
+      ],
+      link: "https://bookmark-mu-self.vercel.app/",
+    },
+    {
+      title: "The Room",
+      tech: ["React.js", "Framer Motion", "CSS"],
+      description:
+        "An immersive, motion-driven web experience focused on smooth transitions and interaction-led storytelling.",
+      highlights: [
+        "Motion-first UI using Framer Motion",
+        "Smooth page transitions and micro-interactions",
+        "Clean and modular component structure",
+        "Fully responsive across devices",
+      ],
+      link: "https://the-room-gamma.vercel.app/",
+    },
     {
       title: "Neurowel Foundation",
       tech: ["React.js", "Tailwind CSS"],
       description:
-        "An accessible and responsive NGO platform focused on content clarity and structured layout.",
+        "A responsive NGO platform focused on accessibility, clarity, and structured content delivery.",
       highlights: [
-        "Accessibility-first approach",
+        "Accessibility-focused UI implementation",
         "Responsive layout system",
-        "Scalable content structure",
+        "Scalable content architecture",
       ],
       link: "#",
     },
   ],
+
   skills: {
     core: ["React.js", "Next.js", "JavaScript (ES6+)", "Tailwind CSS"],
     architecture: [
@@ -110,11 +115,16 @@ export const RESUME_DATA = {
       "REST APIs",
       "Axios",
       "JSON handling",
-      "Error states & loading strategies",
+      "Error & loading state management",
     ],
-    performance: ["Code Splitting", "Lazy Loading", "Performance Optimization"],
-    dev: ["Git", "GitHub", "Bitbucket", "Vercel", "CI/CD basics"],
+    performance: [
+      "Code Splitting",
+      "Lazy Loading",
+      "Frontend Performance Optimization",
+    ],
+    dev: ["Git", "GitHub", "Bitbucket", "Vercel", "CI/CD fundamentals"],
   },
+
   contacts: {
     email: "mailto:surajmaurya.pvt@gmail.com",
     linkedin: "https://www.linkedin.com/in/suraj-maurya-33a91325a",
