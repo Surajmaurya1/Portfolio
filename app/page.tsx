@@ -7,12 +7,14 @@ import { Projects } from "@/components/Projects";
 import { Skills } from "@/components/Skills";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { Philosophy } from "@/components/Philosophy";
 
 export default function Home() {
   return (
-    <main className="relative bg-background overflow-hidden">
+    <main className="relative bg-background">
       <Header />
       <Hero />
+      <Philosophy />
       <About />
       <Experience />
       <Projects />

@@ -5,16 +5,22 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { RESUME_DATA } from "@/data/resume";
+import { scaleIn, smoothTransition, hoverScaleWrapper } from "@/lib/animations";
 
 type Project = typeof RESUME_DATA.projects[number];
 
 export function ProjectCard({ project, index }: { project: Project, index: number }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      viewport={{ once: true }}
+      initial="hidden"
+      whileInView="visible"
+      whileHover="hover"
+      variants={{
+        ...scaleIn,
+        hover: hoverScaleWrapper.hover
+      }}
+      transition={{ ...smoothTransition, delay: index * 0.1 }}
+      viewport={{ once: true, margin: "-10%" }}
       className="group relative overflow-hidden rounded-xl bg-surface border border-white/5 hover:border-white/10 transition-colors p-6 sm:p-8"
     >
       <div className="flex justify-between items-start mb-4">

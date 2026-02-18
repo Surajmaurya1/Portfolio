@@ -3,32 +3,93 @@
 
 import { motion } from "framer-motion";
 import { RESUME_DATA } from "@/data/resume";
-import { ProjectCard } from "./ProjectCard";
 import { Section } from "./Section";
 import { ScrollRevealText } from "./ScrollRevealText";
+import { fadeUp, smoothTransition, staggerContainer } from "@/lib/animations";
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 export function Projects() {
   return (
     <Section id="projects" className="py-20 lg:py-32">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mb-12 md:mb-20 text-center"
-      >
-        <ScrollRevealText
-          text="Featured Projects"
-          className="text-3xl md:text-5xl font-bold font-display mb-6 text-white"
+      <div className="container mx-auto px-4 md:px-8">
+        <motion.div 
+            initial={{ opacity: 0, width: "0%" }}
+            whileInView={{ opacity: 1, width: "100%" }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "circOut" }}
+            className="w-full h-px bg-white/20 mb-12 lg:mb-20" 
         />
-        <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
-          A selection of projects that demonstrate scalable architecture and performance-focused development.
-        </p>
-      </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-        {RESUME_DATA.projects.map((project, index) => (
-          <ProjectCard key={project.title} project={project} index={index} />
-        ))}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+          {/* Title - Sticky */}
+          <div className="lg:col-span-5 lg:sticky lg:top-32 h-fit">
+             <motion.div
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeUp}
+              transition={smoothTransition}
+              viewport={{ once: true, margin: "-10%" }}
+            >
+              <h2 className="text-5xl md:text-7xl lg:text-7xl font-bold font-display tracking-tighter leading-[0.9] text-white uppercase break-words">
+                <ScrollRevealText
+                  text="Selected Work"
+                  className="block text-left"
+                  tagName="span"
+                />
+              </h2>
+            </motion.div>
+          </div>
+
+          {/* List */}
+          <div className="lg:col-span-7 flex flex-col">
+            <motion.div
+               variants={staggerContainer}
+               initial="hidden"
+               whileInView="visible"
+               viewport={{ once: true, margin: "-10%" }}
+            >
+              {RESUME_DATA.projects.map((project, index) => (
+                <motion.div 
+                  key={index}
+                  variants={fadeUp}
+                  transition={smoothTransition}
+                  className="group py-12 border-t border-white/10 last:border-b"
+                >
+                  <div className="flex flex-col gap-6">
+                    <div className="flex justify-between items-start">
+                        <h3 className="text-3xl md:text-4xl font-bold text-white group-hover:text-accent transition-colors duration-300">
+                            {project.title}
+                        </h3>
+                        <Link 
+                            href={project.link} 
+                            target="_blank"
+                            className="p-3 bg-white/5 rounded-full hover:bg-white/10 transition-colors group-hover:rotate-45 duration-300 border border-white/5"
+                        >
+                            <ArrowUpRight className="w-6 h-6 text-white" />
+                        </Link>
+                    </div>
+                    
+                    <p className="text-neutral-400 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
+                        {project.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-4 mt-2">
+                         {project.tech.map((tech) => (
+                            <span 
+                                key={tech} 
+                                className="px-4 py-1.5 border border-white/20 rounded-full text-sm text-neutral-300 tracking-wide"
+                            >
+                                {tech}
+                            </span>
+                        ))}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
       </div>
     </Section>
   );

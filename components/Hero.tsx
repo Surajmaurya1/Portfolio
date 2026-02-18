@@ -6,19 +6,25 @@ import { Button } from "./Button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import TextPressure from "./TextPressure";
 import Link from "next/link";
+import { fadeUp, smoothTransition } from "@/lib/animations";
+import { ScrollRevealText } from "./ScrollRevealText";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-4">
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        initial="hidden"
+        animate="visible"
+        variants={fadeUp}
+        transition={smoothTransition}
         className="max-w-4xl mx-auto space-y-8"
       >
-        <h2 className="text-sm md:text-base font-medium text-accent tracking-widest uppercase mb-4">
-        Frontend Engineer
-        </h2>
+        <ScrollRevealText 
+          text="Frontend Engineer"
+          className="text-sm md:text-base font-medium text-accent tracking-widest uppercase mb-4 flex justify-center gap-2"
+          wordClassName="inline-block"
+          charClassName="inline-block"
+        />
         
         <div className="relative h-24 md:h-40 w-full mb-4">
           <TextPressure
