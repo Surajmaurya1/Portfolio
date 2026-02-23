@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 import { Section } from "./Section";
 import { RESUME_DATA } from "@/data/resume";
 import { fadeUp, smoothTransition } from "@/lib/animations";
-import { ScrollRevealText } from "./ScrollRevealText";
 
 export function Philosophy() {
   return (
-    <section className="relative w-full py-12 lg:py-24">
+    <section className="relative w-full py-12 lg:py-24 border-t brutalist-border bg-background text-foreground">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 mt-8 hover:bg-white hover:text-black transition-colors duration-700">
+          
           {/* Left Column: Typography */}
-          <div className="flex flex-col justify-center lg:justify-start lg:sticky lg:top-32 h-fit">
+          <div className="lg:col-span-6 flex flex-col justify-center lg:justify-start lg:border-r brutalist-border lg:pr-12 p-8 transition-colors duration-700 group">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -20,47 +20,20 @@ export function Philosophy() {
               variants={fadeUp}
               transition={smoothTransition}
             >
-              <h2 
-                className="font-bold font-display tracking-[-0.02em] leading-[0.9] text-white overflow-visible"
-                style={{ fontSize: "clamp(2rem, 3.5vw, 4rem)" }}
+              <h2 className="text-micro text-primary mb-6">[ MISSION ]</h2>
+               <h3 
+                className="font-display uppercase tracking-tighter leading-[0.85] mb-8 group-hover:text-black"
+                style={{ fontSize: "clamp(3.5rem, 7vw, 7rem)" }}
               >
-                <ScrollRevealText
-                  text="Building Scalable"
-                  className="block text-left mb-2" 
-                  tagName="span"
-                />
-                <span className="block text-neutral-500">
-                   <ScrollRevealText
-                    text="Systems &"
-                    className="block text-left mb-2"
-                    tagName="span"
-                  />
-                </span>
-                 <ScrollRevealText
-                  text="Production Ready"
-                  className="block text-left mb-2"
-                   tagName="span"
-                />
-                 <span className="flex items-center gap-4">
-                  <ScrollRevealText
-                    text="Interfaces."
-                    className="block text-left"
-                     tagName="span"
-                  />
-                   {/* The Japanese text from reference or a symbol */}
-                   <motion.span 
-                    initial={{ scale: 0, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 0.5, duration: 0.5 }}
-                    className="w-4 h-4 rounded-full bg-white inline-block mt-2" 
-                   />
-                </span>
-              </h2>
+                Building <br/> Scalable <br/> Systems.
+              </h3>
+              
+              <div className="w-12 h-12 bg-primary brutalist-border"></div>
             </motion.div>
           </div>
 
           {/* Right Column: Meaningful Description */}
-          <div className="flex flex-col justify-center">
+          <div className="lg:col-span-6 flex flex-col justify-center p-8 transition-colors duration-700 group">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -68,20 +41,20 @@ export function Philosophy() {
               variants={fadeUp}
               transition={{ ...smoothTransition, delay: 0.2 }}
             >
-               <p className="text-xl md:text-2xl text-white font-medium mb-8 leading-relaxed">
-                 I am a Software Developer & Engineer based in India. I build scalable systems, resilient APIs, and high-performance web applications with clean architecture.
+               <p className="text-xl md:text-3xl font-sans mb-12 leading-snug font-medium max-w-lg">
+                 I am a Software Developer & Engineer. I build resilient APIs, scalable systems, and high-performance web applications with relentless precision.
                </p>
                
-               <div className="space-y-6">
-                 {Object.entries(RESUME_DATA.skills).map(([category, skills]) => (
-                    <div key={category}>
-                        <span className="block text-sm font-mono text-neutral-500 uppercase tracking-widest mb-3">
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                 {Object.entries(RESUME_DATA.skills).slice(0, 2).map(([category, skills]) => (
+                    <div key={category} className="border-t brutalist-border pt-4">
+                        <span className="block text-micro text-primary mb-4">
                             [ {category.toUpperCase()} ]
                         </span>
-                        <div className="flex flex-wrap gap-2">
-                            {skills.map(s => (
-                                <span key={s} className="text-xs font-mono text-neutral-400 uppercase tracking-widest hover:text-white transition-colors cursor-default whitespace-nowrap">
-                                    [ {s} ]
+                        <div className="flex flex-col gap-1">
+                            {skills.slice(0, 4).map(s => (
+                                <span key={s} className="text-sm font-sans uppercase font-bold tracking-tight">
+                                    {s}
                                 </span>
                             ))}
                         </div>
@@ -93,24 +66,19 @@ export function Philosophy() {
         </div>
 
         {/* Bottom Bar */}
-        <motion.div 
-            initial={{ opacity: 0, width: "0%" }}
-            whileInView={{ opacity: 1, width: "100%" }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, ease: "circOut", delay: 0.4 }}
-            className="w-full h-px bg-white/20 mt-12 mb-6 lg:mt-20 lg:mb-8" 
-        />
+        <div className="border-t brutalist-border w-full mt-12 mb-6 lg:mt-24 lg:mb-8" />
         
-        <div className="flex flex-wrap gap-4 md:gap-8 text-xs md:text-sm font-medium text-neutral-400 uppercase tracking-widest font-mono">
-            {["[ Architecture ]", "[ Performance ]", "[ Scalability ]"].map((label, i) => (
+        <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-8">
+            {["ARCHITECTURE", "PERFORMANCE", "SCALABILITY"].map((label, i) => (
                 <motion.span
                     key={label}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.6 + (i * 0.1), duration: 0.5 }}
+                    transition={{ delay: 0.2 + (i * 0.1), duration: 0.5 }}
+                    className="text-micro text-neutral-500 font-bold"
                 >
-                    {label}
+                    // {label}
                 </motion.span>
             ))}
         </div>

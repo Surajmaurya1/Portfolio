@@ -2,8 +2,6 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Button } from "./Button";
-import { ArrowRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { fadeUp, smoothTransition } from "@/lib/animations";
 import { ScrollRevealText } from "./ScrollRevealText";
@@ -53,21 +51,9 @@ export function Hero() {
 
         {/* Description & Meta - Right aligned on desktop */}
         <div className="lg:col-span-4 order-1 lg:order-2 flex flex-col justify-end items-start lg:items-end mb-4 lg:mb-8 space-y-6">
-             {/* <div className="text-right hidden lg:block">
-                <span className="block text-xs font-mono text-neutral-500 uppercase tracking-widest mb-1">[ LOCATION ]</span>
-                <span className="block text-white font-medium font-[family-name:var(--font-playfair)] italic text-lg">India, Earth</span>
-             </div>
-             
-             <div className="text-right hidden lg:block">
-                <span className="block text-xs font-mono text-neutral-500 uppercase tracking-widest mb-1">[ STATUS ]</span>
-                <span className="block text-white font-medium flex items-center gap-2 justify-end">
-                    <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                    Available for new projects
-                </span>
-             </div> */}
 
-            <p className="text-xl md:text-2xl text-neutral-300 font-light leading-relaxed max-w-sm text-left lg:text-right">
-                <span className="font-[family-name:var(--font-playfair)] italic">Frontend Engineer</span> focused on building <span className="font-[family-name:var(--font-playfair)] italic">scalable</span>, high-performance web applications with clean architecture.
+            <p className="text-lg md:text-xl lg:text-2xl text-neutral-300 font-light leading-snug md:leading-relaxed max-w-sm text-left lg:text-right">
+                <span className="font-bold text-white">Frontend Engineer</span> focused on building <span className="font-bold text-white relative z-10 px-1"><span className="absolute inset-0 bg-primary/20 -z-10 skew-x-[-10deg]"></span>scalable</span>, high-performance web applications with clean architecture.
             </p>
             
             <div className="flex gap-6">

@@ -1,12 +1,8 @@
-
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import { StaggeredMenu } from "./StaggeredMenu";
-import { motion } from "framer-motion";
-
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,17 +27,15 @@ export function Header() {
         items={menuItems}
         socialItems={socialItems}
         isFixed={true}
-        menuButtonColor="#fff"
+        menuButtonColor="#f2f2f1"
         openMenuButtonColor="#000"
-        accentColor="#0070f3" 
-        colors={["#cecece", "#f0f0f0"]} 
+        accentColor="#e63946" 
+        colors={["#e63946", "#f2f2f1"]} 
         logoUrl="" 
         changeMenuColorOnOpen={true}
         onMenuOpen={() => setIsMenuOpen(true)}
         onMenuClose={() => setIsMenuOpen(false)}
       />
-      
-
     </div>
   );
 }

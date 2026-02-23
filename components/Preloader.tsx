@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -31,18 +30,25 @@ export const Preloader = () => {
            initial={{ y: 0 }}
            exit={{ y: "-100%" }}
            transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-           className="fixed inset-0 z-[9999] flex items-center justify-center bg-black text-white cursor-wait"
+           className="fixed inset-0 z-[9999] flex items-end justify-between p-8 bg-background text-foreground cursor-wait brutalist-border"
         >
-           <div className="flex items-start justify-center text-8xl md:text-9xl font-bold font-display tracking-tighter overflow-hidden">
+           {/* Decorative elements */}
+           <div className="absolute top-8 left-8 text-micro text-neutral-500 animate-pulse">
+             SYSTEM INITIALIZING...
+           </div>
+           <div className="absolute top-8 right-8 w-16 h-16 border-t-2 border-r-2 border-primary"></div>
+           <div className="absolute bottom-8 left-8 w-16 h-16 border-b-2 border-l-2 border-primary"></div>
+
+           <div className="flex items-end justify-end w-full text-9xl md:text-[15rem] leading-none font-bold font-display tracking-tighter overflow-hidden text-primary">
                 <CountUp 
                   to={100} 
                   duration={1.5} 
                   onEnd={() => {
                      setTimeout(() => setShow(false), 200);
                   }}
-                  className="tabular-nums leading-none"
+                  className="tabular-nums leading-none tracking-tighter"
                 />
-                <span className="text-4xl md:text-5xl mt-2 md:mt-4">%</span>
+                <span className="text-4xl md:text-8xl mb-4 md:mb-12 ml-2">%</span>
            </div>
         </motion.div>
       )}
